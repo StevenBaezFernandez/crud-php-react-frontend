@@ -24,7 +24,7 @@ function App() {
   });
 
   const getData = () => {
-    fetch(`http://localhost/react-api/api.php?id=${updateFormValues.id}`)
+    fetch(`https://react-api-php.herokuapp.com?id=${updateFormValues.id}`)
      .then(resp => resp.json())
      .then(data => {
       setProducts(data);
