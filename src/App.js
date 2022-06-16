@@ -49,7 +49,7 @@ function App() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(addFormvalues)
     };
-    fetch("http://localhost/react-api/api.php", requestOptions)
+    fetch("https://react-api-php.herokuapp.com", requestOptions)
     .then(res => res.json())
     .then(data => {
       getData();
@@ -73,7 +73,7 @@ function App() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(updateFormValues)
     };
-    fetch(`http://localhost/react-api/api.php?id=${updateFormValues.id}`, requestOptions)
+    fetch(`https://react-api-php.herokuapp.com?id=${updateFormValues.id}`, requestOptions)
     .then(res => res.json())
     .then(data => {
       getData();
@@ -94,7 +94,7 @@ function App() {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json' }
     };
-    fetch(`http://localhost/react-api/api.php?id=${productToDelete}`, requestOptions)
+    fetch(`https://react-api-php.herokuapp.com?id=${productToDelete}`, requestOptions)
     .then(resp => resp.json())
     .then(data => {
       getData();
